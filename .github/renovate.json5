@@ -10,7 +10,7 @@
       "matchManagers": ["asdf"],
       "excludePackageNames": ["terraform"]
     }
-  ]
+  ],
 
   "regexManagers": [
     // Terraform. Overrides the default Renovate configuration that uses
