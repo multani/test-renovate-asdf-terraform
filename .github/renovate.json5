@@ -4,4 +4,17 @@
  ],
 
   "dependencyDashboard": true,
+
+
+  "regexManagers": [
+    // Terraform. Overrides the default Renovate configuration that uses
+    // `"depNameTemplate": "terraform"` and creates duplicated pull requests.
+    {
+      "fileMatch": ["\\.tool-versions$"],
+      "matchStrings": ["(^|\\n)terraform (?<currentValue>\\S+)"],
+       "depNameTemplate": "hashicorp/terraform",
+       "datasourceTemplate": "github-releases",
+       "extractVersionTemplate": "^v(?<version>\\S+)"
+    },
+  ],
 }
